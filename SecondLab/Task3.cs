@@ -36,5 +36,31 @@ namespace SecondLab
                 }
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (pictureBox1.Image != null)
+            {
+                SaveFileDialog sfd = new SaveFileDialog();
+
+                sfd.Title = "Сохранить картинку как...";
+                sfd.OverwritePrompt = true;     //предложение о перезаписывании существующего файла
+                sfd.CheckPathExists = true;     //предупреждение о несуществующем пути для сохранения
+                sfd.Filter = "Image Files(*.JPEG)|*.JPEG|Image Files(*.JPG)|*.JPG|Image Files(*.PNG)|*.PNG";
+                sfd.ShowHelp = true;            //отображение кнопки справки
+
+                if (sfd.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        pictureBox1.Image.Save(sfd.FileName);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Невозможно сохранить изображение!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
     }
 }
