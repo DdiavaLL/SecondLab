@@ -47,6 +47,8 @@
             // h_trackBar
             // 
             this.h_trackBar.Location = new System.Drawing.Point(53, 268);
+            this.h_trackBar.Maximum = 360;
+            this.h_trackBar.Minimum = -360;
             this.h_trackBar.Name = "h_trackBar";
             this.h_trackBar.Size = new System.Drawing.Size(266, 45);
             this.h_trackBar.TabIndex = 0;
@@ -54,6 +56,8 @@
             // s_trackBar
             // 
             this.s_trackBar.Location = new System.Drawing.Point(53, 319);
+            this.s_trackBar.Maximum = 100;
+            this.s_trackBar.Minimum = -100;
             this.s_trackBar.Name = "s_trackBar";
             this.s_trackBar.Size = new System.Drawing.Size(266, 45);
             this.s_trackBar.TabIndex = 1;
@@ -61,6 +65,8 @@
             // v_trackBar
             // 
             this.v_trackBar.Location = new System.Drawing.Point(53, 371);
+            this.v_trackBar.Maximum = 100;
+            this.v_trackBar.Minimum = -100;
             this.v_trackBar.Name = "v_trackBar";
             this.v_trackBar.Size = new System.Drawing.Size(265, 45);
             this.v_trackBar.TabIndex = 2;
@@ -115,6 +121,7 @@
             this.button2.TabIndex = 7;
             this.button2.Text = "Применить изменения";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
