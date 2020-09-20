@@ -14,6 +14,8 @@ namespace SecondLab
     {
         Graphics g;
 
+        Image help;
+
         public Task3()
         {
             InitializeComponent();
@@ -106,7 +108,7 @@ namespace SecondLab
             double tH = h_trackBar.Value;
             double tS = s_trackBar.Value / 100.0;
             double tV = v_trackBar.Value / 100.0;
-            Bitmap new_bitmap = (Bitmap)pictureBox1.Image.Clone();
+            Bitmap new_bitmap = (Bitmap)help.Clone();
 
             for (int i = 0; i < new_bitmap.Width; ++i)
             {
@@ -161,6 +163,7 @@ namespace SecondLab
                 try
                 {
                     pictureBox1.Image = new Bitmap(ofd.FileName);
+                    help = new Bitmap(ofd.FileName);
                 }
                 catch
                 {
