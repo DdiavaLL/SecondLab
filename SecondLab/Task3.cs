@@ -20,6 +20,11 @@ namespace SecondLab
             g = this.CreateGraphics();
         }
 
+        bool MyEqual(double a, double b)
+        {
+            return Math.Abs(a - b) < 0.0001;
+        }
+
         // Преобразование RGB -> HSV
         double[] ConvertRGBtHSV(double R, double G, double B)
         {
@@ -29,19 +34,19 @@ namespace SecondLab
             double H, S, V;
 
             // Вычисление Hue
-            if (Equals(MAX, MIN))
+            if (MyEqual(MAX, MIN))
             {
                 H = 0;
             }
-            else if (Equals(MAX, R) && G >= B)
+            else if (MyEqual(MAX, R) && G >= B)
             {
                 H = 60 * ((G - B) / (MAX - MIN));
             }
-            else if (Equals(MAX, R) && G < B)
+            else if (MyEqual(MAX, R) && G < B)
             {
                 H = 60 * ((G - B) / (MAX - MIN)) + 360;
             }
-            else if (Equals(MAX, G))
+            else if (MyEqual(MAX, G))
             {
                 H = 60 * ((B - R) / (MAX - MIN)) + 120;
             }
@@ -51,7 +56,7 @@ namespace SecondLab
             }
 
             // Вычисление Saturation
-            if (Equals(MAX, 0))
+            if (MyEqual(MAX, 0))
             {
                 S = 0;
             }
@@ -74,7 +79,7 @@ namespace SecondLab
             double f = (H / 60.0) - Math.Floor(H / 60.0);
             double p = V * (1 - S);
             double q = V * (1 - f * S);
-            double t = V * (1 - ((1 - f) * S));
+            double t = V * (1 - (1 - f) * S);
 
             switch(Hi)
             {
@@ -114,6 +119,9 @@ namespace SecondLab
                     if (pixel_change[0] < 0)
                     {
                         pixel_change[0] += 360;
+                    } else if (pixel_change[0] > 360)
+                    {
+                        pixel_change[0] -= 360;
                     }
 
                     pixel_change[1] += tS;
@@ -137,7 +145,7 @@ namespace SecondLab
                     }
 
                     var pixel_rezult = ConvertHSVtRGB(pixel_change[0], pixel_change[1], pixel_change[2]);
-                    new_bitmap.SetPixel(i, i1, Color.FromArgb(next_pixel.A, (int)(pixel_rezult[0] * 255), (int)(pixel_rezult[1] * 255), (int)(pixel_rezult[2] * 255)));
+                    new_bitmap.SetPixel(i, i1, Color.FromArgb((int)(pixel_rezult[0] * 255), (int)(pixel_rezult[1] * 255), (int)(pixel_rezult[2] * 255)));
                 }
                 pictureBox1.Image = new_bitmap;
             }
