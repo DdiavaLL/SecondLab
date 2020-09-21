@@ -161,6 +161,7 @@
             this.Name = "Task3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Task3";
+            this.Load += new System.EventHandler(this.Task3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.h_trackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.s_trackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.v_trackBar)).EndInit();

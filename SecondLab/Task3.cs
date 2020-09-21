@@ -202,5 +202,10 @@ namespace SecondLab
         {
             Draw();
         }
+
+        private void Task3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
