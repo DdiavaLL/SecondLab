@@ -98,5 +98,42 @@ namespace SecondLab
             pictureBox4.Image = BmpArr[2];
             HystogramRGB(BmpArr[2]);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.Filter = "Image Files(*.JPEG; *.JPG; *.PNG)|*.JPEG;*.JPG;*.PNG";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    pictureBox1.Image = new Bitmap(ofd.FileName);
+                    Clear();
+                    BmpArr = GetRgbChannels(pictureBox1.Image as Bitmap);
+                }
+                catch
+                {
+                    MessageBox.Show("Невозможно открыть выбранный файл!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Clear()
+        {
+            HystogramRGB(pictureBox1.Image as Bitmap);
+            try
+            {
+                pictureBox2.Image = new Bitmap(pictureBox2.Width, pictureBox2.Height);
+                pictureBox3.Image = new Bitmap(pictureBox3.Width, pictureBox3.Height);
+                pictureBox4.Image = new Bitmap(pictureBox4.Width, pictureBox4.Height);
+            }
+            catch { }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
     }
 }
