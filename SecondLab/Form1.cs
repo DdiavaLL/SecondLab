@@ -34,5 +34,10 @@ namespace SecondLab
             Task3 t3 = new Task3();
             t3.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
