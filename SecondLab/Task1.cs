@@ -160,7 +160,7 @@ namespace SecondLab{
             //chart1.Series[1].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
 
             Dictionary<int, int> countG1 = new Dictionary<int, int>();
-            Dictionary<int, int> countG2 = new Dictionary<int, int>();
+            //Dictionary<int, int> countG2 = new Dictionary<int, int>();
             for (int i = 0; i < 256; i++){
                 countG1[i] = 0;
                 //countG2[i] = 0;
@@ -186,13 +186,13 @@ namespace SecondLab{
             //chart2.Series[0].Color = Color.Red;
             //chart2.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             chart2.Series.Add("Gray HDTV");
-            chart2.Series[1].Color = Color.Blue;
-            chart2.Series[1].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            chart2.Series[0].Color = Color.Blue;
+            chart2.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
 
-            Dictionary<int, int> countG1 = new Dictionary<int, int>();
+            //Dictionary<int, int> countG1 = new Dictionary<int, int>();
             Dictionary<int, int> countG2 = new Dictionary<int, int>();
             for (int i = 0; i < 256; i++){
-                countG1[i] = 0;
+                //countG1[i] = 0;
                 countG2[i] = 0;
             }
             for (int x = 1; x < bmp.Width; x++){
