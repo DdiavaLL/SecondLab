@@ -72,7 +72,7 @@ namespace SecondLab
                     countB[color.B] += 1;
                 }
             }
-            for (int i = 1; i < 256; i++)
+            for (int i = 0; i < 256; i++)
             {
                 chart1.Series["RED"].Points.AddXY(i, countR[i]);
                 chart1.Series["GREEN"].Points.AddXY(i, countG[i]);
@@ -134,6 +134,11 @@ namespace SecondLab
         private void button5_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        private void Task2_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

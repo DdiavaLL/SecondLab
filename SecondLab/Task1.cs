@@ -155,26 +155,26 @@ namespace SecondLab{
             chart1.Series.Add("Gray PAL and NTSC");
             chart1.Series[0].Color = Color.Red;
             chart1.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            chart1.Series.Add("Gray HDTV");
-            chart1.Series[1].Color = Color.Blue;
-            chart1.Series[1].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            //chart1.Series.Add("Gray HDTV");
+            //chart1.Series[1].Color = Color.Blue;
+            //chart1.Series[1].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
 
             Dictionary<int, int> countG1 = new Dictionary<int, int>();
             Dictionary<int, int> countG2 = new Dictionary<int, int>();
             for (int i = 0; i < 256; i++){
                 countG1[i] = 0;
-                countG2[i] = 0;
+                //countG2[i] = 0;
             }
             for (int x = 1; x < bmp.Width; x++){
                 for (int y = 1; y < bmp.Height; y++){
                     Color color = bmp.GetPixel(x, y);
                     countG1[gray1(color)] += 1;
-                    countG2[gray2(color)] += 1;
+                    //countG2[gray2(color)] += 1;
                 }
             }
             for (int i = 1; i < 256; i++){
                 chart1.Series["Gray PAL and NTSC"].Points.AddXY(i, countG1[i]);
-                chart1.Series["Gray HDTV"].Points.AddXY(i, countG2[i]);
+                //chart1.Series["Gray HDTV"].Points.AddXY(i, countG2[i]);
             }
         }
 
@@ -182,9 +182,9 @@ namespace SecondLab{
             chart2.Series.Clear();
             chart2.Name = "Gray Channels";
 
-            chart2.Series.Add("Gray PAL and NTSC");
-            chart2.Series[0].Color = Color.Red;
-            chart2.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            //chart2.Series.Add("Gray PAL and NTSC");
+            //chart2.Series[0].Color = Color.Red;
+            //chart2.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
             chart2.Series.Add("Gray HDTV");
             chart2.Series[1].Color = Color.Blue;
             chart2.Series[1].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -198,12 +198,12 @@ namespace SecondLab{
             for (int x = 1; x < bmp.Width; x++){
                 for (int y = 1; y < bmp.Height; y++){
                     Color color = bmp.GetPixel(x, y);
-                    countG1[gray1(color)] += 1;
+                    //countG1[gray1(color)] += 1;
                     countG2[gray2(color)] += 1;
                 }
             }
             for (int i = 1; i < 256; i++){
-                chart2.Series["Gray PAL and NTSC"].Points.AddXY(i, countG1[i]);
+                //chart2.Series["Gray PAL and NTSC"].Points.AddXY(i, countG1[i]);
                 chart2.Series["Gray HDTV"].Points.AddXY(i, countG2[i]);
             }
         }

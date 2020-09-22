@@ -54,45 +54,50 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(9, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(384, 257);
+            this.pictureBox1.Size = new System.Drawing.Size(288, 209);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(792, 12);
+            this.pictureBox3.Location = new System.Drawing.Point(594, 10);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(384, 257);
+            this.pictureBox3.Size = new System.Drawing.Size(288, 209);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(402, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(302, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(384, 257);
+            this.pictureBox2.Size = new System.Drawing.Size(288, 209);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(1182, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(886, 10);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(384, 257);
+            this.pictureBox4.Size = new System.Drawing.Size(288, 209);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 346);
+            this.button1.Location = new System.Drawing.Point(9, 281);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 44);
+            this.button1.Size = new System.Drawing.Size(80, 36);
             this.button1.TabIndex = 4;
             this.button1.Text = "Выделить красный";
             this.button1.UseVisualStyleBackColor = true;
@@ -100,9 +105,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 407);
+            this.button2.Location = new System.Drawing.Point(9, 331);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 44);
+            this.button2.Size = new System.Drawing.Size(80, 36);
             this.button2.TabIndex = 5;
             this.button2.Text = "Выделить зеленый";
             this.button2.UseVisualStyleBackColor = true;
@@ -110,9 +116,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(12, 469);
+            this.button3.Location = new System.Drawing.Point(9, 381);
+            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 44);
+            this.button3.Size = new System.Drawing.Size(80, 36);
             this.button3.TabIndex = 6;
             this.button3.Text = "Выделить синий";
             this.button3.UseVisualStyleBackColor = true;
@@ -124,7 +131,8 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(251, 305);
+            this.chart1.Location = new System.Drawing.Point(188, 248);
+            this.chart1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
@@ -144,15 +152,16 @@
             this.chart1.Series.Add(series1);
             this.chart1.Series.Add(series2);
             this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(668, 383);
+            this.chart1.Size = new System.Drawing.Size(501, 311);
             this.chart1.TabIndex = 7;
             this.chart1.Text = "chart1";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(12, 291);
+            this.button4.Location = new System.Drawing.Point(9, 236);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 44);
+            this.button4.Size = new System.Drawing.Size(80, 36);
             this.button4.TabIndex = 8;
             this.button4.Text = "Загрузить изображение";
             this.button4.UseVisualStyleBackColor = true;
@@ -160,9 +169,10 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(12, 528);
+            this.button5.Location = new System.Drawing.Point(9, 429);
+            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(107, 44);
+            this.button5.Size = new System.Drawing.Size(80, 36);
             this.button5.TabIndex = 0;
             this.button5.Text = "Сброс";
             this.button5.UseVisualStyleBackColor = true;
@@ -170,9 +180,9 @@
             // 
             // Task2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1589, 775);
+            this.ClientSize = new System.Drawing.Size(1192, 630);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.chart1);
@@ -183,10 +193,10 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Task2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Task2";
+            this.Load += new System.EventHandler(this.Task2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
